@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Italianno&family=Poppins&display=swap');
+
+/* REUSABLE ELEMENTS */
+:root {
+  /* FONTS */
+  --font-text: 'Poppins';
+  --font-headings: 'Inter';
+  --font-logo: 'Italianno';
+
+  /* PADDING */
+  --padding-section: 30px;
+  --padding-card: 20px;
+
+  /* GAP */
+  --gap-gg: 50px;
+  --gap-g: 30px;
+  --gap-m: 20px;
+
+  /* OTHER */
+  --transition-time: 0.2s;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: var(--transition-time);
+}
+
+body {
+  background-color: var(--color-background);
+}
+
+/* COLORS */
+  /* Light theme */
+body.light-theme{
+  --color-text: #020409;
+  --color-background: #fff;
+  --color-primary: #8fb3ff;
+  --color-secondary: #cbdafb;
+  --color-accent: #335ecc;
+}
+  /* Dark theme */
+body.dark-theme{
+  --color-text: #fff;
+  --color-background: #3f3f3f;
+  --color-primary: #8fb3ff;
+  --color-secondary: #09183f;
+  --color-accent: #4a72c9;
+}
+
+hr {
+  width: 75vw;
+}
+
+button {
+  cursor: pointer;
+}
+
+i{
+  color: var(--color-text);
+}
+
+i.btn{
+  color: var(--color-primary);
+  cursor: pointer;
+}
+i.btn:hover{
+  opacity: 0.9;
+}
+
+a{
+  text-decoration: none;
+}
+
+.heading {
+  color: var(--color-text);
+  font-family: var(--font-headings);
+  font-size: 30px;
+  text-align: center;
+}
+
+.text {
+  color: var(--color-text);
+  font-family: var(--font-text);
+  text-align: center;
+}
+
+.color-primary{
+  color: var(--color-primary);
+}
+
+
+/* HEADER */
+
+header {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+header::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-text);
+  height: 2px;
+  width: 100%;
+  opacity: 0.5;
+}
+
+.header-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#header-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-section i {
+  color: var(--color-text);
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-section i:hover {
+  transform: scale(1.1);
+}
+
+.logo {
+  color: var(--color-accent);
+  font-size: 35px;
+  font-family: var(--font-logo);
+  cursor: pointer;
+}
+
+/* MAIN */
+main {
+  padding: var(--padding-section);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-gg);
+}
+
+
+/* RESPONSIVITY */
+@media(max-width: 520px){
+  .header-section i{
+    font-size: 5vw;
+  }
+
+  .heading{
+    font-size: 7vw;
+  }
+
+  @media(max-width: 410px){
+    .heading{
+      font-size: 10vw;
+    }
+  }
+}

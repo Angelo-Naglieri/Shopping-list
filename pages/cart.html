@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+
+  <!-- ICONS -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" 
+  />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="../styles/cart.css">
+
+  <!-- SCRIPT -->
+  <script src="../scripts/index.js" defer></script>
+  <script src="../scripts/cart.js" defer></script>
+
+</head>
+<body class="light-theme">
+  <header>
+    <div class="header-section" id="header-left">
+      <i class="fa-solid fa-moon btn" id="ldMode-btn" onclick="themeSwitch(this)"></i>
+    </div>
+    <div class="header-section" id="header-center">
+      <h1 class="logo">shopp</h1>
+    </div>
+    <div class="header-section" id="header-right">
+      <i class="fa-solid fa-cart-shopping btn"></i>
+      <a href="./products.html">
+        <i class="fa-solid fa-shop btn"></i>
+      </a>
+    </div>
+  </header>
+  <main>
+    <h2 class="heading">Your products</h2>
+    <section class="display-products">
+      <p class="text" id="no-products-message">You don't have any products yet. Try adding one in the products tab.</p>
+    </section>
+  </main>
+</body>
+</html>

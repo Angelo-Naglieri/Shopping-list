@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+
+  <!-- ICONS -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" 
+  />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="../styles/products.css">
+
+  <!-- SCRIPTS -->
+  <script src="../scripts/index.js" defer></script>
+  <script src="../scripts/products.js" defer></script>
+
+</head>
+<body class="light-theme">
+  <header>
+    <div class="header-section" id="header-left">
+      <i class="fa-solid fa-moon btn" id="ldMode-btn" onclick="themeSwitch(this)"></i>
+    </div>
+    <div class="header-section" id="header-center">
+      <h1 class="logo">shopp</h1>
+    </div>
+    <div class="header-section" id="header-right">
+      <a href="./cart.html">
+        <i class="fa-solid fa-cart-shopping btn"></i>
+      </a>
+      <i class="fa-solid fa-shop btn"></i>
+    </div>
+  </header>
+  <main>
+    <h2 class="heading"><span class="color-primary">1.</span> Select a product:</h2>
+    <section class="products-section" id="products-section">
+      <div class="product-card" id="egg-card" onclick="selectProduct(this)">
+        <i class="fa-solid fa-egg  fa-2xl product-icon"></i>
+        <p class="product-text">Egg</p>
+      </div>
+      <div class="product-card" id="meat-card" onclick="selectProduct(this)">
+        <i class="fa-solid fa-drumstick-bite fa-2xl product-icon"></i>
+        <p class="product-text">Meat</p>
+      </div>
+      <div class="product-card" id="cheese-card" onclick="selectProduct(this)">
+        <i class="fa-solid fa-cheese fa-2xl product-icon"></i>
+        <p class="product-text">Cheese</p>
+      </div>
+      <div class="product-card" id="pizza-card" onclick="selectProduct(this)">
+        <i class="fa-solid fa-pizza-slice fa-2xl product-icon"></i>
+        <p class="product-text">Pizza</p>
+      </div>
+      <div class="product-card" id="bread-card" onclick="selectProduct(this)">
+        <i class="fa-solid fa-bread-slice fa-2xl product-icon"></i>
+        <p class="product-text">Bread</p>
+      </div>
+      <div class="product-card" id="salad-card" onclick="selectProduct(this)">
+        <i class="fa-solid fa-bowl-food fa-2xl product-icon"></i>
+        <p class="product-text">Salad</p>
+      </div>
+      <div class="product-card" id="water-card" onclick="selectProduct(this)">
+        <i class="fa-solid fa-water fa-2xl product-icon"></i>
+        <p class="product-text">Water</p>
+      </div>
+      <div class="product-card" id="coffee-card" onclick="selectProduct(this)">
+        <i class="fa-solid fa-mug-hot fa-2xl product-icon"></i>
+        <p class="product-text">Coffee</p>
+      </div>
+      <div class="product-card" id="apple-card" onclick="selectProduct(this)">
+        <i class="fa-solid fa-apple-whole fa-2xl product-icon"></i>
+        <p class="product-text">Apple</p>
+      </div>
+      <div class="product-card" id="carrot-card" onclick="selectProduct(this)">
+        <i class="fa-solid fa-carrot fa-2xl product-icon"></i>
+        <p class="product-text">Carrot</p>
+      </div>
+      <div class="product-card" id="lemon-card" onclick="selectProduct(this)">
+        <i class="fa-solid fa-lemon fa-2xl product-icon"></i>
+        <p class="product-text">Lemon</p>
+      </div>
+      <div class="product-card" id="wine-card" onclick="selectProduct(this)">
+        <i class="fa-solid fa-wine-bottle fa-2xl product-icon"></i>
+        <p class="product-text">Wine</p>
+      </div>
+      <div class="product-card" id="fish-card" onclick="selectProduct(this)">
+        <i class="fa-solid fa-fish fa-2xl product-icon"></i>
+        <p class="product-text">Fish</p>
+      </div>
+      <div class="product-card" id="cookie-card" onclick="selectProduct(this)">
+        <i class="fa-solid fa-cookie fa-2xl product-icon"></i>
+        <p class="product-text">Cookie</p>
+      </div>
+      <div class="product-card" id="burger-card" onclick="selectProduct(this)">
+        <i class="fa-solid fa-burger fa-2xl product-icon"></i>
+        <p class="product-text">Burger</p>
+      </div>
+      <div class="product-card" id="pepper-card" onclick="selectProduct(this)">
+        <i class="fa-solid fa-pepper-hot fa-2xl product-icon"></i>
+        <p class="product-text">Pepper</p>
+      </div>
+      <div class="product-card" id="hotDog-card" onclick="selectProduct(this)">
+        <i class="fa-solid fa-hotdog fa-2xl product-icon"></i>
+        <p class="product-text">Hot dog</p>
+      </div>
+      <div class="product-card" id="bacon-card" onclick="selectProduct(this)">
+        <i class="fa-solid fa-bacon fa-2xl product-icon"></i>
+        <p class="product-text">Bacon</p>
+      </div>
+      <div class="product-card" id="cake-card" onclick="selectProduct(this)">
+        <i class="fa-solid fa-cake-candles fa-2xl product-icon"></i>
+        <p class="product-text">Cake</p>
+      </div>
+      <div class="product-card" id="other-card" onclick="selectProduct(this, true)">
+        <i class="fa-solid fa-ellipsis fa-2xl product-icon"></i>
+        <p class="product-text">Other</p>
+      </div>
+    </section>
+    <hr>
+    <h2 class="heading"><span class="color-primary">2.</span> How much do you want to buy?</h2>
+    <section class="quantity-section">
+      <i class="fa-solid fa-circle-plus btn" id="add-btn" onclick="changeQuantity(true)"></i>
+      <input class="quantity-input" id="quantity-input" type="number" onchange="refreshProductCard()">
+      <i class="fa-solid fa-circle-minus btn" id="remove-btn" onclick="changeQuantity(false)"></i>
+    </section>
+    <hr>
+    <h2 class="heading"><span class="color-primary">3.</span> Add the product to the cart:</h2>
+    <section class="confirm-card">
+      <div class="product-data">
+        <i class="product-img fa-question fa-solid fa-2xl"></i>
+        <input type="text" class="text product-name"></input>
+        <p class="text product-quantity"></p>
+      </div>
+      <button type="submit" id="addProduct-btn" onclick="addNewProduct()">Add product</button>
+    </section>
+  </main>
+</body>
+</html>
