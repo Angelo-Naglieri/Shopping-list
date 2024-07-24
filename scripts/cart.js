@@ -1,10 +1,12 @@
 function refreshProducts (){
+
   const productList = document.querySelector(".display-products");
   const noProductMessage = document.getElementById("no-products-message");
 
   productList.querySelectorAll(".product").forEach((element)=>{
     productList.removeChild(element)
   })
+
   if(localStorage.length<3){
     localStorage.productCount = 0;
     noProductMessage.style.display = "block";
@@ -17,14 +19,18 @@ function refreshProducts (){
       }
     }
   }
+
 }
 
 function removeProduct(productNum){
+
   localStorage.removeItem(`product-${productNum}`)
   refreshProducts();
+
 }
 
 function generateProduct (dataArray, num){
+
   const productList = document.querySelector(".display-products");
 
   const productDiv = document.createElement("div");
@@ -54,6 +60,12 @@ function generateProduct (dataArray, num){
   infoDiv.append(productImg, productName, productQuantity);
   productDiv.append(infoDiv, deleteBtn);
   productList.appendChild(productDiv);
+  
 }
 
-document.addEventListener("DOMContentLoaded", refreshProducts);
+document.addEventListener("DOMContentLoaded", ()=>{
+  refreshProducts();
+  if(!localStorage.productCount){
+    localStorage.productCount = 0;
+  }
+});
