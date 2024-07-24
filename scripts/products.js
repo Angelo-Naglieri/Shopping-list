@@ -1,4 +1,5 @@
 function refreshProductCard(product=document.querySelector(".selected"), isOther=false, cleanName=false){
+
   const productCard = document.querySelector(".confirm-card");
   const productCardImg = productCard.querySelector(".product-img");
   const productCardName = productCard.querySelector(".product-name");
@@ -24,6 +25,7 @@ function refreshProductCard(product=document.querySelector(".selected"), isOther
 }
 
 function selectProduct (selectedProduct){
+
   const lastSelectedProduct = document.querySelector(".selected");
 
   if(lastSelectedProduct !== selectedProduct && lastSelectedProduct !== null){
@@ -32,9 +34,11 @@ function selectProduct (selectedProduct){
   selectedProduct.classList.toggle("selected");
 
   refreshProductCard(document.querySelector(".selected"), (selectedProduct.id === "other-card"));
+
 }
 
 function changeQuantity(funcAddRem){
+
   const quantityInput = document.getElementById("quantity-input");
   switch(funcAddRem){
     case true:
@@ -48,9 +52,11 @@ function changeQuantity(funcAddRem){
   }
   
   refreshProductCard();
+
 }
 
 function addNewProduct(){
+
   const productImg = document.querySelector(".product-img");
   const productName = document.querySelector(".product-name");
   const productQuantity = document.querySelector(".product-quantity");
@@ -74,4 +80,5 @@ function addNewProduct(){
     productName.value = "";
     productQuantity.innerText = "";
   }
+  
 }
